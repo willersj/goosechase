@@ -14,7 +14,7 @@ function formatDate(date) {
 const HOW_IT_WORKS = [
   { title: 'Upload your eBird life list', desc: 'Export your observation history as a CSV from ebird.org' },
   { title: 'Set your location and radius', desc: 'Use GPS or search any city, up to 30 miles out' },
-  { title: 'See your ranked hotspots', desc: 'Spots sorted by new species for you, with rare sightings flagged' },
+  { title: 'See your ranked hotspots', desc: 'Sorted by new species for you, with rare sightings flagged' },
 ]
 
 export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSkip, onBack }) {
@@ -47,22 +47,23 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
 
       {/* Left — landing content */}
       <div>
-        <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight tracking-tight mb-5">
+        <h1 className="font-display italic font-semibold text-gc-text leading-[1.1] tracking-tight mb-5"
+            style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)' }}>
           Find your<br />next lifer.
         </h1>
-        <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mb-10">
+        <p className="text-gc-muted text-lg leading-relaxed mb-10">
           GooseChase pulls real-time eBird observations and ranks nearby hotspots by the species
           you haven't seen yet, so every trip out counts.
         </p>
-        <div className="space-y-6">
+        <div className="space-y-5">
           {HOW_IT_WORKS.map((step, i) => (
             <div key={i} className="flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center shrink-0 mt-0.5">
-                <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">{i + 1}</span>
+              <div className="w-7 h-7 rounded-full bg-gc-accent-bg border border-gc-accent flex items-center justify-center shrink-0 mt-0.5">
+                <span className="font-display text-sm font-semibold text-gc-accent">{i + 1}</span>
               </div>
               <div>
-                <p className="font-semibold text-slate-700 dark:text-slate-200">{step.title}</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">{step.desc}</p>
+                <p className="font-semibold text-gc-text">{step.title}</p>
+                <p className="text-sm text-gc-muted mt-0.5">{step.desc}</p>
               </div>
             </div>
           ))}
@@ -72,26 +73,25 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
       {/* Right — upload form */}
       <div>
         {onBack && (
-          <button onClick={onBack} className="text-sm text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 mb-4 flex items-center gap-1">
+          <button onClick={onBack} className="text-sm text-gc-muted hover:text-gc-text mb-4 flex items-center gap-1 transition-colors">
             ← Back
           </button>
         )}
 
-        <h2 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Your Life List</h2>
+        <h2 className="font-display font-semibold text-lg text-gc-text mb-4">Your Life List</h2>
 
-        {/* Stored list summary */}
         {storedLifeList && (
           <div className={`rounded-xl p-3.5 mb-3 border ${
             isStale
-              ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-700'
-              : 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+              ? 'bg-gc-gold-bg border-gc-gold/40 text-gc-gold'
+              : 'bg-gc-new-bg border-gc-new/30 text-gc-new'
           }`}>
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className={`font-semibold text-sm ${isStale ? 'text-amber-800 dark:text-amber-300' : 'text-green-800 dark:text-green-300'}`}>
+                <p className="font-semibold text-sm">
                   {storedLifeList.count.toLocaleString()} species saved
                 </p>
-                <p className={`text-xs mt-0.5 ${isStale ? 'text-amber-600 dark:text-amber-400' : 'text-green-600 dark:text-green-400'}`}>
+                <p className="text-xs mt-0.5 opacity-80">
                   Updated {formatDate(storedLifeList.savedAt)}
                   {age === 0 ? ' (today)' : age === 1 ? ' (yesterday)' : ` · ${age} days ago`}
                 </p>
@@ -99,14 +99,14 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
               <span className="text-lg shrink-0">{isStale ? '⚠️' : '✅'}</span>
             </div>
             {isStale && (
-              <p className="text-xs text-amber-700 dark:text-amber-400 mt-2 leading-relaxed">
+              <p className="text-xs mt-2 leading-relaxed opacity-80">
                 List is {age} days old. Re-export from eBird if you've seen new species recently.
               </p>
             )}
             {!showUpload && (
               <button
                 onClick={() => setShowUpload(true)}
-                className={`text-xs underline mt-1.5 ${isStale ? 'text-amber-700 dark:text-amber-400 hover:text-amber-900' : 'text-green-700 dark:text-green-400 hover:text-green-900'}`}
+                className="text-xs underline mt-1.5 opacity-70 hover:opacity-100 transition-opacity"
               >
                 Upload a newer export
               </button>
@@ -114,7 +114,6 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
           </div>
         )}
 
-        {/* Upload zone */}
         {showUpload && (
           <>
             <div
@@ -128,41 +127,35 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
               }}
               className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-colors ${
                 dragOver
-                  ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
-                  : 'border-slate-300 dark:border-slate-600 hover:border-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                  ? 'border-gc-accent bg-gc-accent-bg'
+                  : 'border-gc-border bg-gc-surface hover:border-gc-accent hover:bg-gc-surface2'
               }`}
             >
-              <input
-                ref={fileRef}
-                type="file"
-                accept=".csv"
-                className="hidden"
-                onChange={e => handleFile(e.target.files[0])}
-              />
+              <input ref={fileRef} type="file" accept=".csv" className="hidden" onChange={e => handleFile(e.target.files[0])} />
               {newParsed ? (
                 <div>
                   <div className="text-3xl mb-2">✅</div>
-                  <p className="font-semibold text-green-700 dark:text-green-400">{newParsed.count.toLocaleString()} species ready</p>
-                  <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Click to change file</p>
+                  <p className="font-semibold text-gc-new">{newParsed.count.toLocaleString()} species ready</p>
+                  <p className="text-xs text-gc-muted mt-1">Click to change file</p>
                 </div>
               ) : (
                 <div>
                   <div className="text-3xl mb-2">📋</div>
-                  <p className="text-slate-600 dark:text-slate-300 font-medium">Drop your eBird CSV here</p>
-                  <p className="text-slate-400 dark:text-slate-500 text-sm mt-1">or click to browse</p>
+                  <p className="text-gc-text font-medium">Drop your eBird CSV here</p>
+                  <p className="text-gc-muted text-sm mt-1">or click to browse</p>
                 </div>
               )}
             </div>
 
             {error && (
-              <p className="text-red-500 dark:text-red-400 text-sm mt-2 bg-red-50 dark:bg-red-900/20 rounded-lg px-3 py-2">{error}</p>
+              <p className="text-red-600 dark:text-red-400 text-sm mt-2 bg-red-50 dark:bg-red-900/20 rounded-lg px-3 py-2">{error}</p>
             )}
 
-            <div className="mt-3 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-xl p-3.5 text-xs text-slate-500 dark:text-slate-400 space-y-1">
-              <p className="font-semibold text-slate-600 dark:text-slate-300 mb-1">How to export from eBird:</p>
+            <div className="mt-3 bg-gc-surface border border-gc-border rounded-xl p-3.5 text-xs text-gc-muted space-y-1">
+              <p className="font-semibold text-gc-text mb-1">How to export from eBird:</p>
               <p>1. Go to{' '}
                 <a href="https://ebird.org/downloadMyData" target="_blank" rel="noreferrer"
-                  className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-300">
+                  className="text-gc-accent-t underline hover:opacity-80 transition-opacity">
                   ebird.org/downloadMyData
                 </a>
               </p>
@@ -172,11 +165,10 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
           </>
         )}
 
-        {/* Actions */}
         <div className="mt-4 flex gap-2.5">
           <button
             onClick={onSkip}
-            className="flex-1 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-medium py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm"
+            className="flex-1 border border-gc-border text-gc-muted font-medium py-2.5 rounded-lg hover:bg-gc-surface2 hover:text-gc-text transition-colors text-sm"
           >
             Skip
           </button>
@@ -184,22 +176,19 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
           {newParsed ? (
             <button
               onClick={() => onNext(newParsed)}
-              className="flex-1 bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors text-sm"
+              className="flex-1 bg-gc-accent text-white font-semibold py-2.5 rounded-lg hover:bg-gc-accent-h transition-colors text-sm"
             >
               Use new list
             </button>
           ) : storedLifeList ? (
             <button
               onClick={onUseSaved}
-              className="flex-1 bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors text-sm"
+              className="flex-1 bg-gc-accent text-white font-semibold py-2.5 rounded-lg hover:bg-gc-accent-h transition-colors text-sm"
             >
               {isStale ? 'Use anyway' : 'Continue'}
             </button>
           ) : (
-            <button
-              disabled
-              className="flex-1 bg-indigo-600 text-white font-semibold py-2.5 rounded-lg opacity-40 cursor-not-allowed text-sm"
-            >
+            <button disabled className="flex-1 bg-gc-accent text-white font-semibold py-2.5 rounded-lg opacity-40 cursor-not-allowed text-sm">
               Continue
             </button>
           )}

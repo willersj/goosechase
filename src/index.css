@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ── Color tokens ─────────────────────────────────────────── */
+:root {
+  --gc-bg:         #ede6d6;
+  --gc-surface:    #f9f5ec;
+  --gc-surface2:   #f2ebe0;
+  --gc-border:     #cec4aa;
+  --gc-text:       #1a2818;
+  --gc-muted:      #70826a;
+  --gc-accent:     #2a6b5a;
+  --gc-accent-h:   #1e5245;
+  --gc-accent-bg:  #dff0ea;
+  --gc-accent-t:   #1e5245;
+  --gc-gold:       #a85e08;
+  --gc-gold-bg:    #fdf2df;
+  --gc-rare:       #b85418;
+  --gc-rare-bg:    #fceee4;
+  --gc-new:        #217055;
+  --gc-new-bg:     #e2f5ec;
+}
+
+.dark {
+  --gc-bg:         #0d1c11;
+  --gc-surface:    #131f16;
+  --gc-surface2:   #192a1d;
+  --gc-border:     #1f3626;
+  --gc-text:       #c8dcc2;
+  --gc-muted:      #4e6c52;
+  --gc-accent:     #4ac888;
+  --gc-accent-h:   #37b075;
+  --gc-accent-bg:  #0d2318;
+  --gc-accent-t:   #4ac888;
+  --gc-gold:       #e09e28;
+  --gc-gold-bg:    #1c1508;
+  --gc-rare:       #df7c24;
+  --gc-rare-bg:    #1c1008;
+  --gc-new:        #4ac888;
+  --gc-new-bg:     #0b2418;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+html {
+  background-color: var(--gc-bg);
+}
+
+body {
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  background-color: var(--gc-bg);
+  color: var(--gc-text);
+  /* Subtle parchment texture in light mode */
+  background-image:
+    radial-gradient(ellipse at 70% 0%, rgba(255,255,255,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, rgba(0,0,0,0.04) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+.dark body {
+  /* Deep forest atmosphere */
+  background-image:
+    radial-gradient(ellipse at 60% 0%, rgba(30, 80, 50, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse at 10% 90%, rgba(10, 30, 15, 0.5) 0%, transparent 50%);
+}
+
+/* ── Typography helpers ───────────────────────────────────── */
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* ── Leaflet overrides ────────────────────────────────────── */
+.leaflet-popup-content-wrapper {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+  font-family: 'Instrument Sans', system-ui, sans-serif !important;
+}
+.leaflet-popup-tip-container { display: none; }

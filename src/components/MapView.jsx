@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 
 function makeIcon(rank, isFocused) {
   const size = isFocused ? 30 : 26
-  const bg = isFocused ? '#4338ca' : '#6366f1'
+  const bg = isFocused ? '#1e5245' : '#2a6b5a'
   const fs = isFocused ? 11 : 10
   return L.divIcon({
     className: '',

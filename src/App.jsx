@@ -84,22 +84,22 @@ function StepBar({ current }) {
         <div key={label} className="flex items-center gap-2">
           <div className="flex items-center gap-1.5">
             <div
-              className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-300 ${
+              className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-300 ${
                 i < idx
-                  ? 'bg-indigo-500 text-white'
+                  ? 'bg-gc-accent text-white'
                   : i === idx
-                  ? 'bg-indigo-600 text-white ring-2 ring-indigo-200 dark:ring-indigo-900 ring-offset-1'
-                  : 'bg-slate-200 dark:bg-slate-700 text-slate-400 dark:text-slate-500'
+                  ? 'bg-gc-accent text-white ring-2 ring-gc-accent-bg ring-offset-1'
+                  : 'bg-gc-surface2 text-gc-muted border border-gc-border'
               }`}
             >
               {i < idx ? '✓' : i + 1}
             </div>
-            <span className={`text-xs hidden sm:block ${i === idx ? 'text-slate-700 dark:text-slate-200 font-medium' : 'text-slate-400 dark:text-slate-600'}`}>
+            <span className={`text-xs hidden sm:block font-medium ${i === idx ? 'text-gc-text' : 'text-gc-muted'}`}>
               {label}
             </span>
           </div>
           {i < STEP_LABELS.length - 1 && (
-            <div className={`w-6 h-0.5 transition-colors duration-300 ${i < idx ? 'bg-indigo-400' : 'bg-slate-200 dark:bg-slate-700'}`} />
+            <div className={`w-8 h-px transition-colors duration-300 ${i < idx ? 'bg-gc-accent' : 'bg-gc-border'}`} />
           )}
         </div>
       ))}
@@ -191,16 +191,16 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors overflow-x-hidden">
-      <header className="sticky top-0 z-50 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-2xl mx-auto px-4 h-12 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+    <div className="min-h-screen bg-gc-bg transition-colors overflow-x-hidden">
+      <header className="sticky top-0 z-50 bg-gc-surface border-b border-gc-border">
+        <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
             <span className="text-xl leading-none">🪿</span>
-            <span className="text-base font-bold tracking-tight text-slate-800 dark:text-white">GooseChase</span>
+            <span className="font-display italic font-semibold text-lg tracking-tight text-gc-text">GooseChase</span>
           </div>
           <button
             onClick={() => setDark(d => !d)}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="w-8 h-8 rounded-lg flex items-center justify-center text-gc-muted hover:bg-gc-surface2 hover:text-gc-text transition-colors"
             aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {dark ? <SunIcon /> : <MoonIcon />}

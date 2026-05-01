@@ -71,24 +71,24 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
   const optBtn = (active) =>
     `flex-1 py-2 rounded-lg text-sm font-medium border transition-colors ${
       active
-        ? 'bg-indigo-600 text-white border-indigo-600'
-        : 'border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20'
+        ? 'bg-gc-accent text-white border-gc-accent'
+        : 'border-gc-border text-gc-muted hover:border-gc-accent hover:bg-gc-accent-bg hover:text-gc-text'
     }`
 
   return (
     <div>
-      <button onClick={onBack} className="text-sm text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 mb-4 flex items-center gap-1">
+      <button onClick={onBack} className="text-sm text-gc-muted hover:text-gc-text mb-4 flex items-center gap-1 transition-colors">
         ← Back
       </button>
-      <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-5">Find Nearby Hotspots</h2>
+      <h2 className="font-display font-semibold text-2xl text-gc-text mb-5">Find Nearby Hotspots</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {/* Settings panel */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-5">
-          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wide mb-5">Search Settings</p>
+        <div className="bg-gc-surface border border-gc-border rounded-xl p-5">
+          <p className="text-xs font-semibold text-gc-muted uppercase tracking-wider mb-5">Search Settings</p>
           <div className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Radius</label>
+              <label className="block text-sm font-medium text-gc-text mb-2">Radius</label>
               <div className="flex gap-2">
                 {DISTANCES.map(d => (
                   <button key={d.value} onClick={() => setDistance(d.value)} disabled={busy} className={optBtn(distance === d.value)}>
@@ -98,8 +98,8 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">Lookback window</label>
-              <p className="text-xs text-slate-400 dark:text-slate-500 mb-2">How many days of recent sightings to include. Shorter = only the freshest reports; longer = catches rarer or less-frequently visited spots.</p>
+              <label className="block text-sm font-medium text-gc-text mb-1">Lookback window</label>
+              <p className="text-xs text-gc-muted mb-2">How many days of recent sightings to include. Shorter = only the freshest reports; longer = catches rarer or less-frequently visited spots.</p>
               <div className="flex gap-2">
                 {BACK_OPTIONS.map(b => (
                   <button key={b.value} onClick={() => setBack(b.value)} disabled={busy} className={optBtn(back === b.value)}>
@@ -112,16 +112,16 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
         </div>
 
         {/* Location panel */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-5">
-          <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wide mb-5">Your Location</p>
+        <div className="bg-gc-surface border border-gc-border rounded-xl p-5">
+          <p className="text-xs font-semibold text-gc-muted uppercase tracking-wider mb-5">Your Location</p>
 
-          <div className="flex bg-slate-100 dark:bg-slate-700/60 rounded-lg p-0.5 gap-0.5 mb-4">
+          <div className="flex bg-gc-surface2 rounded-lg p-0.5 gap-0.5 mb-4">
             <button
               onClick={() => { setMode('location'); setGeoError(null) }}
               className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 mode === 'location'
-                  ? 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-sm'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                  ? 'bg-gc-surface text-gc-text shadow-sm'
+                  : 'text-gc-muted hover:text-gc-text'
               }`}
             >
               My Location
@@ -130,8 +130,8 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
               onClick={() => { setMode('city'); setGeoError(null) }}
               className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 mode === 'city'
-                  ? 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 shadow-sm'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                  ? 'bg-gc-surface text-gc-text shadow-sm'
+                  : 'text-gc-muted hover:text-gc-text'
               }`}
             >
               Search Place
@@ -142,7 +142,7 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
             <button
               onClick={locateGPS}
               disabled={busy}
-              className="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-gc-accent text-white font-semibold py-2.5 rounded-lg hover:bg-gc-accent-h disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
             >
               {locating || loading ? (
                 <><Spinner />{loading ? 'Searching eBird…' : 'Getting your location…'}</>
@@ -158,15 +158,15 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
                 onChange={e => setCityQuery(e.target.value)}
                 placeholder="City, state or country…"
                 autoFocus
-                className="w-full border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full border border-gc-border rounded-lg px-3 py-2 text-sm bg-gc-bg text-gc-text placeholder-gc-muted focus:outline-none focus:ring-2 focus:ring-gc-accent/40 focus:border-gc-accent transition-colors"
               />
               {foundPlace && !loading && (
-                <p className="text-xs text-slate-400 dark:text-slate-500 truncate">{foundPlace.displayName}</p>
+                <p className="text-xs text-gc-muted truncate">{foundPlace.displayName}</p>
               )}
               <button
                 type="submit"
                 disabled={!cityQuery.trim() || busy}
-                className="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-gc-accent text-white font-semibold py-2.5 rounded-lg hover:bg-gc-accent-h disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
               >
                 {geocoding || loading ? (
                   <><Spinner />{loading ? 'Searching eBird…' : 'Finding location…'}</>
@@ -178,7 +178,7 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
       </div>
 
       {(geoError || error) && (
-        <p className="text-red-500 dark:text-red-400 text-sm mt-4 bg-red-50 dark:bg-red-900/20 rounded-lg px-3 py-2">
+        <p className="text-red-600 dark:text-red-400 text-sm mt-4 bg-red-50 dark:bg-red-900/20 rounded-lg px-3 py-2">
           {geoError || error}
         </p>
       )}
