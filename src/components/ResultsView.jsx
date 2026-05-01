@@ -64,7 +64,7 @@ export default function ResultsView({ results, lifeList, back, onReset }) {
             ))}
           </motion.div>
 
-          <div className="hidden lg:block w-96 xl:w-[440px] shrink-0 sticky top-12 h-[calc(100vh-3rem)] rounded-xl overflow-hidden border border-gc-border">
+          <div className="hidden lg:block w-[500px] xl:w-[640px] shrink-0 sticky top-12 h-[calc(100vh-3rem)] rounded-xl overflow-hidden border border-gc-border">
             <MapView hotspots={visibleHotspots} focused={focusedHotspot} />
           </div>
         </div>

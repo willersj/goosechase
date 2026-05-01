@@ -13,7 +13,7 @@ function formatDate(date) {
 
 const HOW_IT_WORKS = [
   { title: 'Upload your eBird life list', desc: 'Export your observation history as a CSV from ebird.org' },
-  { title: 'Set your location and radius', desc: 'Use GPS or search any city, up to 30 miles out' },
+  { title: 'Set your location and radius', desc: 'Search by city or use your current location, with a radius up to 30 miles' },
   { title: 'See your ranked hotspots', desc: 'Sorted by new species for you, with rare sightings flagged' },
 ]
 

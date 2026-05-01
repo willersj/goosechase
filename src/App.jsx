@@ -194,9 +194,12 @@ export default function App() {
     <div className="min-h-screen bg-gc-bg transition-colors [overflow-x:clip]">
       <header className="sticky top-0 z-50 bg-gc-surface border-b border-gc-border">
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className="font-display italic font-semibold text-lg tracking-tight text-gc-text">GooseChase</span>
-          </div>
+          <button
+            onClick={() => { setResults(null); setError(null); navigate('lifelist') }}
+            className="font-display italic font-semibold text-lg tracking-tight text-gc-text hover:opacity-70 transition-opacity"
+          >
+            GooseChase
+          </button>
           <button
             onClick={() => setDark(d => !d)}
             className="w-8 h-8 rounded-lg flex items-center justify-center text-gc-muted hover:bg-gc-surface2 hover:text-gc-text transition-colors"
@@ -207,7 +210,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className="max-w-5xl mx-auto px-6 py-5">
+      <div className={`${step === 'results' ? 'max-w-7xl' : 'max-w-5xl'} mx-auto px-6 py-5`}>
         <StepBar current={step} />
 
         <AnimatePresence mode="wait" custom={direction}>
