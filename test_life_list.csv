@@ -1,0 +1,83 @@
+Submission ID,Common Name,Scientific Name,Taxonomic Order,Count,State/Province,County,Location ID,Location,Latitude,Longitude,Date,Time,Protocol,Duration (Min),All Obs Reported,Distance Traveled (km),Area Covered (ha),Number of Observers,Breeding Code,Observation Details,Checklist Comments,ML Catalog Numbers
+S100000001,Canada Goose,Branta canadensis,342,12,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Mallard,Anas platyrhynchos,545,20,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Ring-billed Gull,Larus delawarensis,6521,8,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,American Robin,Turdus migratorius,28633,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Black-capped Chickadee,Poecile atricapillus,22065,4,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,White-breasted Nuthatch,Sitta carolinensis,26889,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Downy Woodpecker,Dryobates pubescens,11400,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Northern Cardinal,Cardinalis cardinalis,31678,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Dark-eyed Junco,Junco hyemalis,33124,6,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,White-throated Sparrow,Zonotrichia albicollis,33170,5,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,European Starling,Sturnus vulgaris,27813,15,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,Blue Jay,Cyanocitta cristata,21294,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000001,American Crow,Corvus brachyrhynchos,21557,4,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-15,09:00 AM,eBird - Traveling Count,60,1,2.5,,1
+S100000002,Bald Eagle,Haliaeetus leucocephalus,8367,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000002,Red-tailed Hawk,Buteo jamaicensis,8506,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000002,Belted Kingfisher,Megaceryle alcyon,10306,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000002,Hairy Woodpecker,Leuconotopicus villosus,11427,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000002,Song Sparrow,Melospiza melodia,33277,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000002,Tufted Titmouse,Baeolophus bicolor,22080,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-01-22,10:15 AM,eBird - Traveling Count,45,1,1.8,,1
+S100000003,Rock Pigeon,Columba livia,1868,20,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Mourning Dove,Zenaida macroura,2412,4,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Northern Flicker,Colaptes auratus,11900,2,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Pileated Woodpecker,Dryocopus pileatus,11480,1,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Carolina Wren,Thryothorus ludovicianus,26749,2,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Golden-crowned Kinglet,Regulus satrapa,26840,3,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000003,Eastern Towhee,Pipilo erythrophthalmus,32850,1,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-02-10,08:30 AM,eBird - Traveling Count,90,1,3.2,,1
+S100000004,American Black Duck,Anas rubripes,533,3,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Bufflehead,Bucephala albeola,742,8,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Hooded Merganser,Lophodytes cucullatus,756,2,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Common Merganser,Mergus merganser,762,5,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Great Blue Heron,Ardea herodias,7753,2,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Osprey,Pandion haliaetus,7832,1,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,Cooper's Hawk,Astur cooperii,8278,1,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000004,American Kestrel,Falco sparverius,12028,1,US-PA,Delaware,L109003,Brandywine Creek State Park,39.8321,-75.5801,2024-03-05,09:45 AM,eBird - Traveling Count,50,1,2.0,,2
+S100000005,Wood Duck,Aix sponsa,455,4,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Blue-winged Teal,Spatula discors,485,6,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,American Coot,Fulica americana,5500,3,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Killdeer,Charadrius vociferus,5827,2,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Double-crested Cormorant,Nannopterum auritum,7424,6,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Great Egret,Ardea alba,7802,2,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Tree Swallow,Tachycineta bicolor,24064,15,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Eastern Phoebe,Sayornis phoebe,17005,2,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Yellow-rumped Warbler,Setophaga coronata,34159,8,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000005,Red-winged Blackbird,Agelaius phoeniceus,33779,20,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-04-12,07:30 AM,eBird - Traveling Count,75,1,2.8,,1
+S100000006,Ruby-throated Hummingbird,Archilochus colubris,4820,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Yellow Warbler,Setophaga petechia,34136,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Common Yellowthroat,Geothlypis trichas,34411,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Baltimore Oriole,Icterus galbula,33931,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Rose-breasted Grosbeak,Pheucticus ludovicianus,31625,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Indigo Bunting,Passerina cyanea,31930,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Red-eyed Vireo,Vireo olivaceus,22388,4,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Great Crested Flycatcher,Myiarchus crinitus,17190,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,Scarlet Tanager,Piranga olivacea,31530,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,House Sparrow,Passer domesticus,31534,5,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000006,House Finch,Haemorhous mexicanus,32310,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-05-20,08:00 AM,eBird - Traveling Count,60,1,2.0,,1
+S100000007,Barn Swallow,Hirundo rustica,24187,10,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,Eastern Kingbird,Tyrannus tyrannus,17466,2,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,Willow Flycatcher,Empidonax traillii,17065,1,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,Common Grackle,Quiscalus quiscula,33853,12,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,Brown-headed Cowbird,Molothrus ater,33905,4,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,American Goldfinch,Spinus tristis,32617,5,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000007,Cedar Waxwing,Bombycilla cedrorum,27782,8,US-PA,Chester,L109004,Marsh Creek State Park,40.1021,-75.7401,2024-06-08,07:00 AM,eBird - Traveling Count,90,1,3.5,,2
+S100000008,Eastern Bluebird,Sialia sialis,28110,3,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-09-14,08:30 AM,eBird - Traveling Count,60,1,2.2,,1
+S100000008,Cedar Waxwing,Bombycilla cedrorum,27782,20,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-09-14,08:30 AM,eBird - Traveling Count,60,1,2.2,,1
+S100000008,Sharp-shinned Hawk,Accipiter striatus,8253,2,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-09-14,08:30 AM,eBird - Traveling Count,60,1,2.2,,1
+S100000008,Broad-winged Hawk,Buteo platypterus,8453,15,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-09-14,08:30 AM,eBird - Traveling Count,60,1,2.2,,1
+S100000008,Ruby-crowned Kinglet,Corthylio calendula,26844,4,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-09-14,08:30 AM,eBird - Traveling Count,60,1,2.2,,1
+S100000009,Great Horned Owl,Bubo virginianus,8910,1,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-10-30,06:00 PM,eBird - Stationary Count,20,1,,,1
+S100000009,Hermit Thrush,Catharus guttatus,28510,2,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-10-30,09:00 AM,eBird - Traveling Count,55,1,2.1,,1
+S100000009,Brown Creeper,Certhia americana,26962,1,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-10-30,09:00 AM,eBird - Traveling Count,55,1,2.1,,1
+S100000009,Winter Wren,Troglodytes hiemalis,26765,1,US-PA,Philadelphia,L109002,Wissahickon Valley Park,40.0521,-75.2201,2024-10-30,09:00 AM,eBird - Traveling Count,55,1,2.1,,1
+S100000010,Wild Turkey,Meleagris gallopavo,1274,6,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-11-20,08:00 AM,eBird - Traveling Count,45,1,1.5,,2
+S100000010,Herring Gull,Larus argentatus,6534,3,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-11-20,08:00 AM,eBird - Traveling Count,45,1,1.5,,2
+S100000010,Greater White-fronted Goose,Anser albifrons,257,2,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-11-20,08:00 AM,eBird - Traveling Count,45,1,1.5,,2
+S100000010,Tundra Swan,Cygnus columbianus,155,25,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-11-20,08:00 AM,eBird - Traveling Count,45,1,1.5,,2
+S100000010,American Tree Sparrow,Spizelloides arborea,32935,4,US-PA,Lancaster,L109005,Middle Creek WMA,40.1521,-76.2001,2024-11-20,08:00 AM,eBird - Traveling Count,45,1,1.5,,2
+S100000011,Purple Finch,Haemorhous purpureus,32301,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-12-07,10:00 AM,eBird - Stationary Count,30,1,,,1
+S100000011,Fox Sparrow,Passerella iliaca,33238,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-12-07,10:00 AM,eBird - Stationary Count,30,1,,,1
+S100000011,American Tree Sparrow,Spizelloides arborea,32935,3,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2024-12-07,10:00 AM,eBird - Stationary Count,30,1,,,1
+S100000012,Northern Mockingbird,Mimus polyglottos,27734,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2025-03-15,09:30 AM,eBird - Traveling Count,50,1,1.8,,1
+S100000012,Eastern Meadowlark,Sturnella magna,33558,2,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2025-03-15,09:30 AM,eBird - Traveling Count,50,1,1.8,,1
+S100000012,American Woodcock,Scolopax minor,5965,1,US-PA,Philadelphia,L109001,Fairmount Park,40.0121,-75.2001,2025-03-15,09:30 AM,eBird - Traveling Count,50,1,1.8,,1

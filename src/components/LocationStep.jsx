@@ -98,7 +98,8 @@ export default function LocationStep({ onSearch, loading, error, onBack }) {
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Lookback window</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">Lookback window</label>
+              <p className="text-xs text-slate-400 dark:text-slate-500 mb-2">How many days of recent sightings to include. Shorter = only the freshest reports; longer = catches rarer or less-frequently visited spots.</p>
               <div className="flex gap-2">
                 {BACK_OPTIONS.map(b => (
                   <button key={b.value} onClick={() => setBack(b.value)} disabled={busy} className={optBtn(back === b.value)}>
