@@ -15,28 +15,33 @@ function formatObsDt(obsDt) {
   return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 }
 
-function BirdPhoto({ comName }) {
+function BirdPhoto({ speciesCode }) {
   const [src, setSrc] = useState(null)
 
   useEffect(() => {
+    if (!speciesCode) { setSrc(''); return }
     let cancelled = false
-    fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(comName)}`)
+    fetch(`https://search.macaulaylibrary.org/api/v1/search?taxonCode=${speciesCode}&mediaType=Photo&count=1&sort=rating_rank_desc`)
       .then(r => r.ok ? r.json() : null)
-      .then(data => { if (!cancelled) setSrc(data?.thumbnail?.source ?? '') })
+      .then(data => {
+        if (cancelled) return
+        const id = data?.results?.content?.[0]?.catalogId
+        setSrc(id ? `https://cdn.download.ams.birds.cornell.edu/api/v1/asset/${id}/320` : '')
+      })
       .catch(() => { if (!cancelled) setSrc('') })
     return () => { cancelled = true }
-  }, [comName])
+  }, [speciesCode])
 
   const baseClass = 'w-14 h-14 rounded-lg shrink-0 object-cover'
   if (src === null) return <div className={`${baseClass} bg-gc-surface2 animate-pulse`} />
-  if (!src) return <div className={`${baseClass} bg-gc-surface2 flex items-center justify-center text-xl`}>🐦</div>
-  return <img src={src} alt={comName} className={baseClass} onError={() => setSrc('')} />
+  if (!src) return <div className={`${baseClass} bg-gc-surface2`} />
+  return <img src={src} alt="" className={baseClass} onError={() => setSrc('')} />
 }
 
 function SpeciesRow({ species }) {
   return (
     <div className="flex items-start gap-3 py-2.5 border-b border-gc-border last:border-0">
-      <BirdPhoto comName={species.comName} />
+      <BirdPhoto speciesCode={species.speciesCode} />
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-1.5 flex-wrap">
           <p className="font-semibold text-sm text-gc-text leading-snug">{species.comName}</p>
@@ -115,16 +120,16 @@ export default function HotspotCard({ hotspot, hasLifeList, rank, back, onExpand
               </p>
             )}
           </div>
-          <div className="text-right shrink-0 ml-2">
+          <div className="text-right shrink-0 ml-2 min-w-[4rem]">
             {hasLifeList ? (
               <div>
                 <span className="font-display text-2xl font-semibold text-gc-new leading-none">{newCount}</span>
-                <span className="text-xs text-gc-muted block mt-0.5">new</span>
+                <span className="text-xs text-gc-muted block mt-0.5 whitespace-nowrap">new species</span>
               </div>
             ) : (
               <div>
                 <span className="font-display text-2xl font-semibold text-gc-accent leading-none">{totalCount}</span>
-                <span className="text-xs text-gc-muted block mt-0.5">species</span>
+                <span className="text-xs text-gc-muted block mt-0.5 whitespace-nowrap">species</span>
               </div>
             )}
           </div>

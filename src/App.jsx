@@ -191,7 +191,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gc-bg transition-colors overflow-x-hidden">
+    <div className="min-h-screen bg-gc-bg transition-colors [overflow-x:clip]">
       <header className="sticky top-0 z-50 bg-gc-surface border-b border-gc-border">
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
