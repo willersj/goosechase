@@ -46,7 +46,6 @@ export default function ResultsView({ results, lifeList, back, onReset }) {
 
       {visibleHotspots.length === 0 ? (
         <div className="text-center py-16">
-          <div className="text-5xl mb-3">🔭</div>
           <p className="font-medium text-gc-muted">
             {hasLifeList ? 'No new species found at nearby hotspots.' : 'No hotspots found in this area.'}
           </p>

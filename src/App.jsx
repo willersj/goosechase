@@ -195,7 +195,6 @@ export default function App() {
       <header className="sticky top-0 z-50 bg-gc-surface border-b border-gc-border">
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="text-xl leading-none">🪿</span>
             <span className="font-display italic font-semibold text-lg tracking-tight text-gc-text">GooseChase</span>
           </div>
           <button

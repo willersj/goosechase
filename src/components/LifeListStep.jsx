@@ -53,7 +53,7 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
         </h1>
         <p className="text-gc-muted text-lg leading-relaxed mb-10">
           GooseChase pulls real-time eBird observations and ranks nearby hotspots by the species
-          you haven't seen yet, so every trip out counts.
+          you haven't seen yet.
         </p>
         <div className="space-y-5">
           {HOW_IT_WORKS.map((step, i) => (
@@ -96,7 +96,6 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
                   {age === 0 ? ' (today)' : age === 1 ? ' (yesterday)' : ` · ${age} days ago`}
                 </p>
               </div>
-              <span className="text-lg shrink-0">{isStale ? '⚠️' : '✅'}</span>
             </div>
             {isStale && (
               <p className="text-xs mt-2 leading-relaxed opacity-80">
@@ -134,7 +133,6 @@ export default function LifeListStep({ storedLifeList, onNext, onUseSaved, onSki
               <input ref={fileRef} type="file" accept=".csv" className="hidden" onChange={e => handleFile(e.target.files[0])} />
               {newParsed ? (
                 <div>
-                  <div className="text-3xl mb-2">✅</div>
                   <p className="font-semibold text-gc-new">{newParsed.count.toLocaleString()} species ready</p>
                   <p className="text-xs text-gc-muted mt-1">Click to change file</p>
                 </div>
